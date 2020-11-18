@@ -30,7 +30,7 @@ data = pd.read_csv(filename)
 #Soucis : le .DS Store s'affiche
 
 
-st.subheader('Afficher le dataset')
+st.subheader('Etude du dataset')
 
 if st.button("Afficher des lignes du dataset") :
 	n = st.number_input('Choissisez le nombre de ligne à afficher',value=5)
@@ -46,12 +46,26 @@ if st.checkbox("Afficher les colonnes") :
 if st.checkbox("Afficher le type des colonnes") :
 	st.dataframe(data.dtypes)
 
-if st.button('Show shape'):
+if st.checkbox('Show shape'):
     st.text('Nombre de lignes')
     st.write(data.shape[0])
     st.text('Nombre de colonnes')
     st.write(data.shape[1])
 
+if st.checkbox('Statistiques descriptive du dataset'):
+	st.write(data.describe())
+
+st.subheader('Les graphiques du dataset')
+st.text('La heatmap')
+
+# Heatmap de corrélation 
+if st.checkbox("Matrice de corrélation"):
+	#corr = data.iloc[:, -15:].corr()
+    heatmap = sns.heatmap(data.corr(), vmin=-1, vmax=1, annot=True)
+    heatmap.set_title('Heatmap de corrélation', fontdict={'fontsize':12}, pad=12)
+    st.write(heatmap)
+    st.pyplot()
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 #Parce que c'st rigolo
 if st.button("Oh c'est rigolo"):
