@@ -58,6 +58,30 @@ def book_id_search(book_id):
         	# On affiche une erreur
             return 'Aucun livre ne porte cet id'
 
+@app.route('/api/books/<string:book_title>')
+
+def book_title_search(book_title) :
+
+	#On créer un tableau vide pour stocké les livres trouvés
+	find_book = []
+
+	#On parcours notre liste & pour chaque livres trouvés on l'ajoute à notre tableau vide
+	for book in booklist :
+
+		#on check les titres
+		if book['titre'] == book_title :
+
+			#Si la condition est vérifié on l'add au tableau
+			find_book.append(book)
+
+			#on retourne le résult
+			return jsonify(find_book)
+
+		else :
+
+			#On return une erreur
+			return "Aucun livre ne porte ce titre"
+
 
 #Exec du code
 if __name__ == '__main__':
