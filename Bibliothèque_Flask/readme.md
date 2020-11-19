@@ -21,5 +21,5 @@ book=[
 * faite une route `/api/books` avec une méthode `GET` qui retourne cette variable sous forme de json ✅
 * faite une route qui retourne un book selon son `id` ✅
 * faite une route qui retourne un book selon son titre ✅
-* chager le fichier [books.json](https://drive.google.com/file/d/1UdRCm5d5UAPnfjGes_rHZl2kDQ9NNAsG/view?usp=sharing) et faite de même avec ce fichier ❎
+* chager le fichier [books.json](https://drive.google.com/file/d/1UdRCm5d5UAPnfjGes_rHZl2kDQ9NNAsG/view?usp=sharing) et faite de même avec ce fichier ✅
 * **(bonus)** écrire un template pour le résultat de la recherche ❎
