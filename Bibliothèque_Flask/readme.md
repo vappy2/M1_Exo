@@ -16,7 +16,8 @@ book=[
 		'titre': 'un autre titre random',
 	}
 ]
-``` ✅
+``` 
+✅
 * faite une route `/api/books` avec une méthode `GET` qui retourne cette variable sous forme de json ✅
 * faite une route qui retourne un book selon son `id` ❎
 * faite une route qui retourne un book selon son titre ❎
