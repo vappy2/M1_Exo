@@ -6,6 +6,8 @@ from flask import Flask
 #On import la librairie pour charger des templates
 from flask import render_template
 
+from flask import jsonify
+
 #On créer l'instance de l'appli Flask
 
 app = Flask(__name__)
@@ -32,9 +34,7 @@ book=[
 @app.route("/api/books", methods=['GET'])
 
 def afficher_book() :
-	#for i in book :
-	#	print(book[i])
-	print('pouet')
+	return jsonify(book)
 
 #Exec du code
 if __name__ == '__main__':
