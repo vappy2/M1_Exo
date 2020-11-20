@@ -25,8 +25,6 @@ Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant :
 
 Cette commande permet de lancer le container "hello-world"
 
----
-
 ## Lancement `getting-started`
 
 `$ docker run -d -p 80:80 docker/getting-started`
