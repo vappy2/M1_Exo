@@ -39,11 +39,12 @@ Lorsque que je vais lancer un serveur web, il va rendre les pages web sur le por
 
 #### Listes des containers installés
 
-`docker ps -a`
+`$ docker ps -a`
+
 Afficher les containers
 
 #### Listes des images
-`docker images` 
+`$ docker images` 
 
 Affiche les images installeées avec leur tailles respectives
 
@@ -53,10 +54,12 @@ Affiche les images installeées avec leur tailles respectives
 
 ### Lancement `hello-world`
 `$ docker run hello-world` 
+
 Cette commande permet de lancer le container "hello-world"
 
 ### Lancement `getting-started`
 `$ docker run -d -p 80:80 docker/getting-started`
+
 Lance mon container `getting-started` sur le port 80
 
 ### lancement d'un container `ubuntu`
