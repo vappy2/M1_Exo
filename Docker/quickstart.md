@@ -19,6 +19,30 @@ Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant :
 * Install pip & pip3
 * Install Flask avec notre appli
 
-## Lancer hello-world
+## Lancement `hello-world`
 
-!![<'Lancement de Hello World'>](https://github.com/vappy2/M1_Exo/blob/main/Docker/img/hello-world.png)
+`$ docker run hello-world` 
+
+Cette commande permet de lancer le container "hello-world"
+
+---
+
+## Lancement `getting-started`
+
+`$ docker run -d -p 80:80 docker/getting-started`
+
+J'aurais ainsi ma page sur le localhost:80
+
+## Les commandes `build`, `run`, `exec`
+
+* `build` : Permet de construire une image depuis un Dockerfile et un "context".
+* `run` : Permet de crée une couche de conteneur inscriptible sur l'image specifiée, puis la démarre.
+* `exec` : Permet de lancer une commande dans un conteneur en cours d'éxécution.
+
+## Le port dans un container 
+
+### Commande pour spécifier le port 
+` docker run -p numeroduport`
+
+### Son rôle 
+Lorsque que je vais lancer un serveur web, il va rendre les pages web sur le port 80, mais seulement à l’intérieur du conteneur. Je n’y aurais pas accès car c’est totalement isolé, le conteneur a son propre réseau. Afin de pouvoir accéder aux pages web, je vais utiliser l’option -p qui va me permettre de spécifier le port de ma machine et lui dire vers quel port du conteneur je veux faire la liaison. De cette façon, je vais pouvoir accéder aux pages web via mon navigateur.
