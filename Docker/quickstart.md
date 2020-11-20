@@ -21,4 +21,4 @@ Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant :
 
 ## Lancer hello-world
 
-!()
+!![<'Lancement de Hello World'>](https://github.com/vappy2/M1_Exo/blob/main/Docker/img/hello-world.png)
