@@ -6,6 +6,8 @@ from flask import Flask
 #On import la librairie pour charger des templates
 from flask import render_template
 
+#on importe json pour pouvoir lire le fichier
+import json
 from flask import jsonify
 
 #On créer l'instance de l'appli Flask
@@ -18,17 +20,16 @@ app = Flask(__name__)
 def index():
 	return "Welcome to my app"
 
-#On instancie notre livre
-booklist=[
-	{
-		'id':1,
-		'titre' : 'un titre',
-	},
-	{
-		'id':2,
-		'titre': 'un autre titre random',
-	}
-]
+#On instancie notre liste de livre
+#On load notre Json
+def loadJson(path):
+    f = open(path)
+    loadedJson = json.load(f)
+    f.close()
+    return loadedJson
+
+#On utilise la fonction pour load notre JSON puis on le défini come notre variable
+booklist = loadJson('data/books.json')
 
 #On affiche les livre continue dans la liste
 @app.route("/api/books", methods=['GET'])
@@ -69,7 +70,7 @@ def book_title_search(book_title) :
 	for book in booklist :
 
 		#on check les titres
-		if book['titre'] == book_title :
+		if book['title'] == book_title :
 
 			#Si la condition est vérifié on l'add au tableau
 			find_book.append(book)
