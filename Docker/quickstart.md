@@ -11,7 +11,7 @@ Une **image** va être les contenus de notre contenant (= container)
 
 ## À quoi sert un `Dockerfile` ?
 
-Un `Dockerfile£` est la liste de ce que l'on va mettre dans notre container. Il faut cependant faire très attention à **l'ordre** dans lequel on ajoute nos images. 
+Un `Dockerfile` est la liste de ce que l'on va mettre dans notre container. Il faut cependant faire très attention à **l'ordre** dans lequel on ajoute nos images. 
 Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant : 
 
 * Mettre OS donc Ubuntu
