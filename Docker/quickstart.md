@@ -3,7 +3,7 @@
 ## Comprendre la différence entre images et containers
 
 Un **container** va être le contenant de nos besoins.
-Une **image*** va être les contenus de notre contenant (= container) 
+Une **image** va être les contenus de notre contenant (= container) 
 
 *Exemple* : Si l'on part en vacances avec une voiture avec des bagages à l'intérieur, et bien **la voiture est le container** tandis que **les différents bagages seront les différentes images**
 
