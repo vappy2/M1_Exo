@@ -7,7 +7,7 @@ Une **image** va être les contenus de notre contenant (= container)
 
 *Exemple* : Si l'on part en vacances avec une voiture avec des bagages à l'intérieur, et bien **la voiture est le container** tandis que **les différents bagages seront les différentes images**
 
-Attention : Une image correspond à 1 bagagage, donc *x bagages = x images*
+⚠️ Attention : Une image correspond à 1 bagage, donc *x bagages = x images*
 
 ## À quoi sert un `Dockerfile` ?
 
@@ -20,7 +20,7 @@ Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant :
 * Install Flask avec notre appli
 
 
-## Commande de Docker 
+## Commande de Docker 🧐
 ### Les commandes `build`, `run`, `exec`
 
 * `build` : Permet de construire une image depuis un Dockerfile et un "context".
@@ -35,7 +35,7 @@ Par exemple pour notre cas on va faire un `Dockerfile` dans l'ordre suivant :
 #### Son rôle 
 Lorsque que je vais lancer un serveur web, il va rendre les pages web sur le port 80, mais seulement à l’intérieur du conteneur. Je n’y aurais pas accès car c’est totalement isolé, le conteneur a son propre réseau. Afin de pouvoir accéder aux pages web, je vais utiliser l’option -p qui va me permettre de spécifier le port de ma machine et lui dire vers quel port du conteneur je veux faire la liaison. De cette façon, je vais pouvoir accéder aux pages web via mon navigateur.
 
-### Autres commandes executées :
+### Autres commandes executées 🧐
 
 #### Listes des containers installés
 
