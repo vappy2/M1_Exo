@@ -1,16 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
         <meta charset="utf-8">
         <title>Todo Application</title>
+
+        <!-- On importe le CSS-->
+        <link rel="stylesheet" type="text/css" href="{% static 'todo/style.css' %}">
 </head>
 <body>
     <div class="form-group">
       <h1>To-Do <small>List</small></h1>
 
+    <form action="add/" method="post" class="form-inline">{% csrf_token %}
 
-      <!-- des choses a ajouter ici -->
-
+      <input type="text" name="content">
+      <input type="submit" value="Ajouter le Todo">
+        
+     </form>
     </div>
 
     <div></div>
