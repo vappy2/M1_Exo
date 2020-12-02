@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Todo Application</title>
+</head>
+<body>
+    <div class="form-group">
+      <h1>To-Do <small>List</small></h1>
+
+
+      <!-- des choses a ajouter ici -->
+
+    </div>
+
+    <div></div>
+
+    {% if todolist %}
+      <ul class="list-unstyled" id="todo">
+        {% for task in todolist %}
+          <li>{{task.content}}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Aucunes tâches dans votre Todo ! Ajoutez-en une</p>
+    {% endif %}
+
+</body>
+</html>
