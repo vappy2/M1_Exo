@@ -1,4 +1,7 @@
+import datetime 
+
 from django.db import models
+from django.utils import timezone #Cet import permet d'obtenir la date selon où on se trouve dans le monde
 
 # Create your models here.
 class Task(models.Model) :
